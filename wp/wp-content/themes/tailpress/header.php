@@ -27,14 +27,8 @@
 							<?php the_custom_logo(); ?>
 						<?php } else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<!-- <?php echo get_bloginfo( 'name' ); ?> -->
 								<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo" class="h-24">
 							</a>
-
-							<p class="text-sm font-light text-gray-600">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</p>
-
 						<?php } ?>
 					</div>
 
@@ -60,7 +54,8 @@
 						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
 						'menu_class'      => 'lg:flex lg:-mx-4',
 						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4',
+						'li_class'        => 'lg:mx-4 p-3 rounded-lg bg-grey hover:shadow-md transition duration-300 ease-in-out',
+						'submenu_class'   => 'bg-gray-100 rounded-lg mt-2 py-2 px-4 shadow-md hidden',
 						'fallback_cb'     => false,
 					)
 				);
@@ -77,7 +72,7 @@
 				<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
                     <div class="mx-auto max-w-screen-md">
                         <h1 class="text-3xl lg:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">
-							しゅぽん
+							ぽんぴ 123
                     </div>
                 </div>
 			</div>
