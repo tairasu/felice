@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<body <?php body_class( 'bg-stone-200 text-gray-900 antialiased' ); ?>>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
@@ -17,11 +17,11 @@
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header>
+	<header class="bg-4 shadow-lg">
 
 		<div class="mx-auto container">
 			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-				<div class="flex justify-between items-center">
+				<div class="flex items-center justify-center">
 					<div>
 						<?php if ( has_custom_logo() ) { ?>
 							<?php the_custom_logo(); ?>
@@ -48,36 +48,23 @@
 				</div>
 
 				<?php
-				wp_nav_menu(
-					array(
-						'container_id'    => 'primary-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4 p-3 rounded-lg bg-grey hover:shadow-md transition duration-300 ease-in-out',
-						'submenu_class'   => 'bg-gray-100 rounded-lg mt-2 py-2 px-4 shadow-md hidden',
-						'fallback_cb'     => false,
-					)
-				);
-				?>
+	wp_nav_menu(
+		array(
+			'container_id'    => 'primary-menu',
+			'container_class' => 'hidden bg-4 rounded-sm mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent  lg:block',
+			'menu_class'      => 'lg:flex my-4 lg:my-0',
+			'theme_location'  => 'primary',
+			'link_before'     => '<button class="lg:mx-4 lg:relative group bg-1 text-4 rounded-lg shadow-lg p-4 hover:bg-3 hover:text-1 transition duration-200">',
+			'link_after'      => '</button>',
+			'submenu_class'   => 'lg:hidden group-hover:block lg:absolute lg:right-0 lg:rounded lg:w-48 lg:max-w-xl bg-4 p-4 block justify-center',
+			'fallback_cb'     => false,
+		)
+	);
+?>
 			</div>
 		</div>
 	</header>
 
-	<div id="content" class="site-content flex-grow">
-
-		<?php if ( is_front_page() ) { ?>
-			<!-- Start introduction -->
-			<div class="container mx-auto">
-				<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
-                    <div class="mx-auto max-w-screen-md">
-                        <h1 class="text-3xl lg:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">
-							ぽんぴ 123
-                    </div>
-                </div>
-			</div>
-			<!-- End introduction -->
-		<?php } ?>
 
 		<?php do_action( 'tailpress_content_start' ); ?>
 
