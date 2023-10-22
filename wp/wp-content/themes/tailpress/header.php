@@ -19,7 +19,7 @@
 
 		<header class="bg-header bg-center bg-fixed bg-cover h-screen">
 			<div class="backdrop-blur-sm bg-transparent w-full h-full">
-				<div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out">
+				<div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-40">
 					<div class="mx-auto container">
 						<div id="header-content" class="lg:flex lg:justify-between lg:items-center py-6 transition duration-300 ease-in-out">
 							<div class="flex items-center right-0 justify-between">
@@ -66,10 +66,10 @@
 					</div>
 				</div>
 				<div class="flex items-center justify-center h-full text-center flex-col bg-4/75">
-					<h1 class="text-7xl text-1 p-20 ">憧れの楽器を日常に。</h1>
+					<h1 class="text-7xl text-gray-600 p-20 drop-shadow-xl">憧れの楽器を日常に。</h1>
 					<div>
-						<p class="p-4 text-xl">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
-						<p class="p-4 text-xl">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
+						<p class="p-4 text-2xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
+						<p class="p-4 text-2xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
 					</div>
 					<svg id="bounce-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce mt-24 w-8 h-8">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
