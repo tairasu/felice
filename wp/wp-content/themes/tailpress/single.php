@@ -1,7 +1,7 @@
-<?php get_header(); ?>
+<?php include 'header-2.php'; ?>
+
 
 	<div class="container mx-auto">
-1
 	<?php if ( have_posts() ) : ?>
 
 		<?php

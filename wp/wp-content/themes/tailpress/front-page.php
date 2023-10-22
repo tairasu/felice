@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
 	<div class="container mx-auto">
-	<?php if ( have_posts() ) : ?>
+
+    <?php do_action('tailpress_content_start'); ?>
+
+    <main>
+
+    <?php if ( have_posts() ) : ?>
 
 		<?php
 		while ( have_posts() ) :
