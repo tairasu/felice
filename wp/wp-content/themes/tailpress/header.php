@@ -1,71 +1,87 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="scroll-smooth">
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-stone-200 text-gray-900 antialiased' ); ?>>
+<body <?php body_class('bg-4 text-gray-900 antialiased'); ?>>
 
-<?php do_action( 'tailpress_site_before' ); ?>
+	<?php do_action('tailpress_site_before'); ?>
 
-<div id="page" class="min-h-screen flex flex-col">
+	<div id="page" class="min-h-screen flex flex-col">
 
-	<?php do_action( 'tailpress_header' ); ?>
+		<?php do_action('tailpress_header'); ?>
 
-	<header class="bg-4 shadow-lg">
+		<header class="bg-header bg-center bg-fixed bg-cover h-screen">
+			<div class="backdrop-blur-sm bg-transparent w-full h-full">
+				<div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out">
+					<div class="mx-auto container">
+						<div id="header-content" class="lg:flex lg:justify-between lg:items-center py-6 transition duration-300 ease-in-out">
+							<div class="flex items-center right-0 justify-between">
+								<div>
+									<?php if (has_custom_logo()) { ?>
+										<?php the_custom_logo(); ?>
+									<?php } else { ?>
+										<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
+											<img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo" class="h-24 transition duration-300 ease-in-out">
+										</a>
+									<?php } ?>
+								</div>
 
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-				<div class="flex items-center justify-center">
-					<div>
-						<?php if ( has_custom_logo() ) { ?>
-							<?php the_custom_logo(); ?>
-						<?php } else { ?>
-							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo" class="h-24">
-							</a>
-						<?php } ?>
-					</div>
+								<div class="lg:hidden">
+									<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
+										<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+												<g id="icon-shape">
+													<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z" id="Combined-Shape" fill="#a18160"></path>
+												</g>
+											</g>
+										</svg>
+									</a>
+								</div>
+							</div>
 
-					<div class="lg:hidden">
-						<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-							<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
-								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-									<g id="icon-shape">
-										<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
-											  id="Combined-Shape"></path>
-									</g>
-								</g>
-							</svg>
-						</a>
+							<?php
+							wp_nav_menu(
+								array(
+									'container_id'    => 'primary-menu',
+									'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent  lg:block',
+									'menu_class'      => 'lg:flex items-center justify-center',
+									'theme_location'  => 'primary',
+									'li_class_0'	  => 'flex justify-center',
+									'li_class_1'	  => 'flex justify-center',
+									'link_before'     => '<button class="lg:mx-4 lg:relative lg:group lg:my-0 my-1 bg-1 text-4 rounded-lg w-32 min-w-32 shadow-lg p-4 hover:bg-3 hover:text-1 transition duration-200">',
+									'link_after'      => '</button>',
+									'submenu_class'   => 'lg:hidden lg:w-48 lg:max-w-xl block mx-auto',
+									'fallback_cb'     => false,
+								)
+							);
+							?>
+						</div>
 					</div>
 				</div>
+				<div class="flex items-center justify-center h-full text-center flex-col bg-4/75">
+					<h1 class="text-7xl text-1 p-20 ">憧れの楽器を日常に。</h1>
+					<div>
+						<p class="p-4 text-xl">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
+						<p class="p-4 text-xl">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
+					</div>
+					<svg id="bounce-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce mt-24 w-8 h-8">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+					</svg>
+				</div>
 
-				<?php
-	wp_nav_menu(
-		array(
-			'container_id'    => 'primary-menu',
-			'container_class' => 'hidden bg-4 rounded-sm mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent  lg:block',
-			'menu_class'      => 'lg:flex my-4 lg:my-0',
-			'theme_location'  => 'primary',
-			'link_before'     => '<button class="lg:mx-4 lg:relative group bg-1 text-4 rounded-lg shadow-lg p-4 hover:bg-3 hover:text-1 transition duration-200">',
-			'link_after'      => '</button>',
-			'submenu_class'   => 'lg:hidden group-hover:block lg:absolute lg:right-0 lg:rounded lg:w-48 lg:max-w-xl bg-4 p-4 block justify-center',
-			'fallback_cb'     => false,
-		)
-	);
-?>
+
 			</div>
-		</div>
-	</header>
+		</header>
 
+		<script src="wp-content/themes/tailpress/resources/js/app.js"></script>
 
-		<?php do_action( 'tailpress_content_start' ); ?>
+		<?php do_action('tailpress_content_start'); ?>
 
 		<main>

@@ -22,7 +22,7 @@ module.exports = {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             backgroundImage: {
-                'header': "url('/images/Felice Photos/DSC00134.JPG')"
+                'header': "url('http://felice.school/wp-content/uploads/2023/10/DSC00134.jpg')"
             },
             colors: {
                 1: '#a18160',
