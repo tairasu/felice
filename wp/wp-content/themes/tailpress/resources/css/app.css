@@ -3,3 +3,8 @@
 @import "tailwindcss/utilities";
 
 @import "custom.css";
+
+@font-face {
+    font-family: 'Hannari';
+    src: local('Hannari'), url('../fonts/HannariMincho-Regular.otf') format('otf');
+  }

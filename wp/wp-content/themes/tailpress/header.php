@@ -13,19 +13,23 @@
 
 	<?php do_action('tailpress_site_before'); ?>
 
-	<button class="lg:hidden fixed bottom-6 right-6 bg-1 text-4 hover:bg-3 hover:text-1 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
-		連絡
-	</button>
+	<a href="/contact">
+		<button class="lg:hidden fixed bottom-6 right-6 bg-1 text-4 hover:bg-3 hover:text-1 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
+			お問い合わせ
+		</button>
+	</a>
+	<a href="/contact">
 	<button class="fixed bottom-12 right-12 bg-1 text-4 hover:bg-3 hover:text-1 font-bold p-6 rounded-full z-30 shadow-lg transition duration-300 hidden lg:block">
 		無料で体験レッスン
 	</button>
+	</a>
 
 	<div id="page" class="min-h-screen flex flex-col">
 
 		<?php do_action('tailpress_header'); ?>
 
 		<header class="bg-header lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-screen z-30">
-			<div class="backdrop-blur-sm bg-transparent w-full h-full">
+			<div class="backdrop-blur-sm bg-4/50 w-full h-full">
 				<div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-50">
 					<div class="mx-auto container">
 						<div id="header-content" class="lg:flex lg:justify-between justify-center lg:items-center py-6 transition duration-300 ease-in-out">
@@ -35,7 +39,7 @@
 										<?php the_custom_logo(); ?>
 									<?php } else { ?>
 										<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-											<img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo" class="h-24 transition duration-300 ease-in-out">
+											<img id="logo" src="wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg transition duration-300 ease-in-out">
 										</a>
 									<?php } ?>
 								</div>
@@ -63,7 +67,7 @@
 									'theme_location'  => 'primary',
 									'li_class_0'	  => 'flex flex-col justify-center items-center',
 									'li_class_1'	  => 'flex flex-col justify-center items-center',
-									'link_before'     => '<button class="lg:mx-4 lg:relative lg:group lg:my-0 my-1 bg-1 text-4 drop-shadow-md antialiased rounded-lg lg:w-32 w-48 min-w-32 shadow-lg p-4 hover:bg-3 hover:text-1 transition duration-200">',
+									'link_before'     => '<button class="lg:mx-4 lg:relative lg:group lg:my-0 my-1 bg-1 text-4 drop-shadow-md antialiased rounded-full lg:w-32 w-48 min-w-32 shadow-lg p-4 hover:bg-3/50 hover:backdrop-blur hover:text-1 transition duration-200">',
 									'link_after'      => '</button>',
 									'submenu_class'   => 'lg:hidden lg:w-48 lg:max-w-xl block mx-auto',
 									'fallback_cb'     => false,
@@ -73,13 +77,15 @@
 						</div>
 					</div>
 				</div>
+				
 				<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-4/75 z-20">
-					<h1 class="lg:text-7xl text-4xl text-gray-600 lg:p-20 py-10 p-2 lg:mb-0 mb-6 lg:mt-0 mt-16 drop-shadow-xl text-right pl-6">憧れの楽器を日常に。</h1>
+				<div class="lg:h-24 h-0"></div>
+					<h1 class="lg:text-7xl text-3xl text-1 lg:p-20 lg:mb-0 mb-6 py-16 lg:mt-0 mt-16 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
 					<div>
 						<p class="p-4 lg:text-2xl text-xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
 						<p class="p-4 lg:text-2xl text-xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
 					</div>
-					<svg id="bounce-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce mt-24 w-8 h-8">
+					<svg id="bounce-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce transform-cpu mt-24 w-8 h-8">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
 					</svg>
 				</div>

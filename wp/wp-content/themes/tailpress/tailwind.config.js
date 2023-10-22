@@ -19,6 +19,9 @@ module.exports = {
             },
         },
         extend: {
+            fontFamily: {
+                hannari: ['Hannari', 'serif']
+            },
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             backgroundImage: {
