@@ -8,3 +8,13 @@
     font-family: 'Hannari';
     src: local('Hannari'), url('../fonts/HannariMincho-Regular.otf') format('otf');
   }
+
+  .center-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #wpmapblock_74afaf53 {
+    position: sticky;
+  }

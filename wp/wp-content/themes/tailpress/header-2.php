@@ -28,7 +28,7 @@
 
     <?php do_action('tailpress_header'); ?>
 
-<header class="bg-header lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-screen z-30">
+<header class="bg-header lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-0 z-30">
     <div class="backdrop-blur-sm bg-4/50 w-full h-full">
         <div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-50">
             <div class="mx-auto container">
@@ -77,10 +77,10 @@
                 </div>
             </div>
         </div>
-                <div class="h-40"></div>
+                
 
 			</div>
 		</header>
-
+        <div class="h-40"></div>
 		<script src="wp-content/themes/tailpress/resources/js/app.js"></script>
 
