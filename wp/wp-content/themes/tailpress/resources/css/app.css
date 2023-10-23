@@ -18,3 +18,26 @@
   #wpmapblock_74afaf53 {
     position: sticky;
   }
+
+  /* input[type="text"]
+{
+    background-color: #ff3737;
+    color: #26ff67;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+} */
+
+input[type="submit"]
+{
+    background-color: #a18160;
+    &:hover {
+        background-color: #ecdacd;
+        color: #a18160;
+    }
+    border-radius: 50px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
