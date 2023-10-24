@@ -19,6 +19,10 @@
     position: sticky;
   }
 
+.leaflet-container {
+  position: sticky;
+}
+
   /* input[type="text"]
 {
     background-color: #ff3737;
