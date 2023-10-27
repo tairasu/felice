@@ -2,3 +2,6 @@ wp/.vscode/sftp.json
 .DS_Store
 old_try/.DS_Store
 wp/wp-content/themes/tailpress/screenshot.png
+.DS_Store
+wp/.DS_Store
+wp/wp-content/.DS_Store
