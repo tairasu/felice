@@ -35,12 +35,12 @@
 			<?php do_action('tailpress_header'); ?>
 
 			<?php if(is_front_page()): ?>
-			<header class="bg-header lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-screen z-30">
+			<header class="bg-header lg:bg-center bg-bottom bg-fixed sticky top-0 lg:bg-cover bg-auto w-screen h-screen z-30">
 			<?php else: ?>
-			<header class="lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-0 z-30">
+			<header class="lg:bg-center bg-bottom bg-fixed top-0 lg:bg-cover bg-auto w-screen h-0 z-30">
 			<?php endif; ?>
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
-					<div id="header-banner" class="bg-4 bg-opacity-75 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-40">
+					<div id="header-banner" class="bg-4 bg-opacity-75 top-0 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-40">
 						<div class="mx-auto container">
 							<div id="header-content" class="lg:flex lg:justify-between justify-center lg:items-center py-6 transition duration-300 ease-in-out">
 								<div class="flex items-center right-0 justify-between">
@@ -112,5 +112,5 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-		<script src="wp-content/themes/tailpress/resources/js/custom.js"></script>
+		<!-- <script src="wp-content/themes/tailpress/resources/js/custom.js"></script> -->
 
