@@ -11,7 +11,7 @@
 
 <body <?php body_class('bg-4 text-gray-900 antialiased'); ?>>
 
-	<?php do_action('tailpress_site_before'); ?>
+	<?php do_action('felice_site_before'); ?>
 
 	<!--Contact button-->
 	<?php if(!is_page('contact')): ?>
@@ -28,11 +28,9 @@
 	<?php endif; ?>
 
 
-
-
 	<div id="page" class="min-h-screen flex flex-col">
 
-			<?php do_action('tailpress_header'); ?>
+			<?php do_action('felice_header'); ?>
 
 			<?php if(is_front_page()): ?>
 			<header class="bg-header lg:bg-center bg-bottom bg-fixed sticky top-0 lg:bg-cover bg-auto w-screen h-screen z-30">
@@ -112,5 +110,5 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-		<!-- <script src="wp-content/themes/tailpress/resources/js/custom.js"></script> -->
+		<script src="wp-content/themes/felice/resources/js/custom.js"></script>
 

@@ -2,7 +2,7 @@
 
 	<div class="container mx-auto">
 
-    <?php do_action('tailpress_content_start'); ?>
+    <?php do_action('felice_content_start'); ?>
 
     <main>
 
