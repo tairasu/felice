@@ -75,7 +75,7 @@
 										'theme_location'  => 'primary',
 										'li_class_0'	  => 'flex flex-col justify-center items-center',
 										'li_class_1'	  => 'flex flex-col justify-center items-center',
-										'link_before'     => '<button class="lg:mx-4 lg:relative lg:group lg:my-0 my-1 bg-1 text-4 drop-shadow-md antialiased rounded-full lg:w-32 w-48 min-w-32 shadow-lg p-4 hover:bg-3/50 hover:backdrop-blur hover:text-1 transition duration-200">',
+										'link_before'     => '<button class="lg:mx-4 lg:relative lg:group lg:my-0 my-1 bg-1 text-4 drop-shadow-md antialiased rounded-lg lg:w-32 w-48 min-w-32 shadow-lg p-4 hover:bg-3/50 hover:backdrop-blur hover:text-1 transition duration-200">',
 										'link_after'      => '</button>',
 										'submenu_class'   => 'lg:hidden lg:w-48 lg:max-w-xl block mx-auto',
 										'fallback_cb'     => false,
