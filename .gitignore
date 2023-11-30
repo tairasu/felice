@@ -2,7 +2,6 @@
 /.idea
 /.vscode
 /images
-/resources
 .prettierrc
 screenshot.png
 .DS_Store

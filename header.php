@@ -4,7 +4,6 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<?php wp_head(); ?>
@@ -34,21 +33,21 @@
 			<?php do_action('felice_header'); ?>
 
 			<?php if(is_front_page()): ?>
-			<header class="bg-header lg:bg-center bg-bottom bg-fixed sticky lg:bg-cover bg-auto w-screen h-screen z-30">
+			<header class="bg-header lg:bg-center bg-bottom bg-fixed lg:bg-cover bg-auto w-screen h-screen z-30">
 			<?php else: ?>
 			<header class="lg:bg-center bg-bottom bg-fixed top-0 lg:bg-cover bg-auto w-screen h-0 z-30">
 			<?php endif; ?>
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
-					<div id="header-banner" class="bg-4 bg-opacity-75 -mt-24 top-0 shadow-lg backdrop-blur fixed w-full transform transition duration-300 ease-in-out z-40">
+					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur -mt-24 w-full duration-300 ease-in-out z-40">
 						<div class="mx-auto container">
-							<div id="header-content" class="lg:flex lg:justify-between justify-center lg:items-center py-6 transition duration-300 ease-in-out">
-								<div class="flex items-center right-0 -mr-12">
+							<div id="header-content" class="lg:flex lg:justify-between justify-center lg:items-end py-6 transition duration-300 ease-in-out">
+								<div class="flex items-center align-bottom">
 									<div>
 										<?php if (has_custom_logo()) { ?>
 											<?php the_custom_logo(); ?>
 										<?php } else { ?>
 											<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg transition duration-300 ease-in-out">
+												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
 											</a>
 										<?php } ?>
 									</div>
@@ -74,7 +73,7 @@
 										'menu_class'      => 'lg:flex items-end justify-center',
 										'menu_item'	      => 'flex flex-col justify-center',
 										'theme_location'  => 'primary',
-										'link_before' 	  => '<div class="flex"><button class="flex justify-center items-end my-1 text-end bg-gray-100 text-gray-800 drop-shadow-md antialiased rounded-lg h-52 w-20 shadow-lg p-4 hover:bg-gray-200 hover:scale-95 transition duration-200">',
+										'link_before' 	  => '<div class="flex"><button class="flex justify-center items-end drop-shadow-lg my-1 text-end bg-gray-100 text-gray-800 antialiased rounded-lg h-52 w-20 shadow-lg p-4 hover:bg-gray-200 hover:scale-95 transition duration-200">',
 										'link_after'      => '</button><div class="absolute w-10 h-32 z-50 ml-14 rounded shadow-sm bg-gray-800"></div></div>',
 										'submenu_class'   => 'lg:hidden lg:w-48 lg:max-w-xl block mx-auto',
 										'fallback_cb'     => false,
@@ -102,7 +101,6 @@
 				
 				</div>
 			</header>
-			123
 
 			<?php if(!is_front_page()): ?>
 				<div class="h-40"></div>
@@ -110,5 +108,5 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-		<script src="wp-content/themes/felice/resources/js/custom.js"></script>
+		<script src="../felice/resources/js/custom.js"></script>
 
