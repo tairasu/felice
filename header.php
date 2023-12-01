@@ -39,15 +39,15 @@
 			<?php endif; ?>
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
 					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur -mt-24 w-full duration-300 ease-in-out z-40">
-						<div class="mx-auto container">
-							<div id="header-content" class="lg:flex lg:justify-between justify-center lg:items-end py-6 transition duration-300 ease-in-out">
+						<div class="mx-auto">
+							<div id="header-content" class="lg:flex lg:justify-between justify-center items-end py-6 transition duration-300 ease-in-out">
 								<div class="flex items-center align-bottom">
 									<div>
 										<?php if (has_custom_logo()) { ?>
 											<?php the_custom_logo(); ?>
 										<?php } else { ?>
 											<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
+												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 ml-4 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
 											</a>
 										<?php } ?>
 									</div>
@@ -73,10 +73,9 @@
 										'menu_class'      => 'lg:flex items-end justify-center',
 										'menu_item'	      => 'flex flex-col justify-center',
 										'theme_location'  => 'primary',
-										'link_before' 	  => '<div class="flex"><button class="flex justify-center items-end drop-shadow-lg my-1 text-end bg-gray-100 text-gray-800 antialiased rounded-lg h-52 w-20 shadow-lg p-4 hover:bg-gray-200 hover:scale-95 transition duration-200">',
-										'link_after'      => '</button><div class="absolute w-10 h-32 z-50 ml-14 rounded shadow-sm bg-gray-800"></div></div>',
-										'submenu_class'   => 'lg:hidden lg:w-48 lg:max-w-xl block mx-auto',
-										'fallback_cb'     => false,
+										'link_before' 	  => '<div class="flex"><button class="flex justify-center font-bold items-end drop-shadow-md my-2 text-md pb-2 bg-orange-50 text-gray-800 antialiased rounded-lg h-52 w-20 shadow-lg p-2 hover:bg-orange-100 hover:scale-95 transition duration-200">',
+										'link_after'      => '</button><div class="absolute w-10 h-24 z-50 ml-14 mt-8 rounded shadow-sm bg-gray-700"></div></div>',
+										'fallback_cb'     => false
 									)
 								);
 								?>
@@ -87,7 +86,7 @@
 					<?php if(is_front_page()): ?>
 					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-4/75 z-20">
 						<div class="lg:h-24 h-0"></div>
-						<h1 class="lg:text-7xl text-3xl text-1 lg:p-20 lg:mb-0 mb-6 py-16 lg:mt-0 mt-16 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
+						<h1 class="lg:text-7xl text-3xl text-1 lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
 						<div>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
@@ -108,5 +107,5 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-		<script src="../felice/resources/js/custom.js"></script>
+		<script src="wp-content/themes/felice/resources/js/custom.js"></script>
 

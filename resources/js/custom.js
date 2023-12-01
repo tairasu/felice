@@ -10,12 +10,12 @@ window.addEventListener('scroll', () => {
 		$header.classList.add('-translate-y-16')
             $logo.classList.add('scale-80')
             $arrow.classList.remove('animate-bounce')
-            $headercontent.classList.add('translate-y-10')
+            $headercontent.classList.add('translate-y-2')
 		return
 	}
       $header.classList.remove('-translate-y-16')
       $logo.classList.remove('scale-80')
       $arrow.classList.add('animate-bounce')
-      $headercontent.classList.remove('translate-y-10')
+      $headercontent.classList.remove('translate-y-2')
 
 });
