@@ -40,14 +40,14 @@
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
 					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur -mt-24 w-full duration-300 ease-in-out z-40">
 						<div class="mx-auto">
-							<div id="header-content" class="lg:flex lg:justify-between justify-center items-end py-6 transition duration-300 ease-in-out">
+							<div id="header-content" class="lg:flex lg:justify-between justify-center mx-16 items-end py-6 transition duration-300 ease-in-out">
 								<div class="flex items-center align-bottom">
 									<div>
 										<?php if (has_custom_logo()) { ?>
 											<?php the_custom_logo(); ?>
 										<?php } else { ?>
 											<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 ml-4 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
+												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
 											</a>
 										<?php } ?>
 									</div>
@@ -71,10 +71,9 @@
 										'container_id'    => 'primary-menu',
 										'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
 										'menu_class'      => 'lg:flex items-end justify-center',
-										'menu_item'	      => 'flex flex-col justify-center',
+										'menu_item'	      => 'flex justify-center',
 										'theme_location'  => 'primary',
-										'link_before' 	  => '<div class="flex"><button class="flex justify-center font-bold items-end drop-shadow-md my-2 text-md pb-2 bg-orange-50 text-gray-800 antialiased rounded-lg h-52 w-20 shadow-lg p-2 hover:bg-orange-100 hover:scale-95 transition duration-200">',
-										'link_after'      => '</button><div class="absolute w-10 h-24 z-50 ml-14 mt-8 rounded shadow-sm bg-gray-700"></div></div>',
+										'walker'          => new Piano_Menu_Walker(),
 										'fallback_cb'     => false
 									)
 								);
