@@ -38,47 +38,42 @@
 			<header class="lg:bg-center bg-bottom bg-fixed top-0 lg:bg-cover bg-auto w-screen h-0 z-30">
 			<?php endif; ?>
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
-					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur -mt-24 w-full duration-300 ease-in-out z-40">
-						<div class="mx-auto">
-							<div id="header-content" class="lg:flex lg:justify-between justify-center mx-16 items-end py-6 transition duration-300 ease-in-out">
-								<div class="flex items-center align-bottom">
-									<div>
-										<?php if (has_custom_logo()) { ?>
-											<?php the_custom_logo(); ?>
-										<?php } else { ?>
-											<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-												<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
-											</a>
-										<?php } ?>
-									</div>
-
-									<div class="lg:hidden">
-										<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-											<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-												<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-													<g id="icon-shape">
-														<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z" id="Combined-Shape" fill="#a18160"></path>
-													</g>
+					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
+						<div id="header-content" class="flex justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
+							<div class="flex items-center justify-between">
+								<?php if (has_custom_logo()) { ?>
+									<?php the_custom_logo(); ?>
+								<?php } else { ?>
+									<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
+										<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
+									</a>
+								<?php } ?>
+								<div class="lg:hidden">
+									<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
+										<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+												<g id="icon-shape">
+													<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z" id="Combined-Shape" fill="#a18160"></path>
 												</g>
-											</svg>
-										</a>
-									</div>
+											</g>
+										</svg>
+									</a>
 								</div>
-
-								<?php
-								wp_nav_menu(
-									array(
-										'container_id'    => 'primary-menu',
-										'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
-										'menu_class'      => 'lg:flex items-end justify-center',
-										'menu_item'	      => 'flex justify-center',
-										'theme_location'  => 'primary',
-										'walker'          => new Piano_Menu_Walker(),
-										'fallback_cb'     => false
-									)
-								);
-								?>
 							</div>
+
+							<?php
+							wp_nav_menu(
+								array(
+									'container_id'    => 'primary-menu',
+									'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
+									'menu_class'      => 'lg:flex items-end justify-center',
+									'menu_item'	      => 'flex justify-center',
+									'theme_location'  => 'primary',
+									'walker'          => new Piano_Menu_Walker(),
+									'fallback_cb'     => false
+								)
+							);
+							?>
 						</div>
 					</div>
 					
