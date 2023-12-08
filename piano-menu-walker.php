@@ -2,7 +2,7 @@
 
 class Piano_Menu_Walker extends Walker_Nav_Menu {
     // piano sequence
-    private $keyboard_layout = ['w', 'b', 'w', 'w', 'b', 'w', 'b', 'w', 'w', 'b', 'w', 'b'];
+    private $keyboard_layout = ['w', 'b', 'w', 'b', 'w', 'w', 'b', 'w', 'w', 'b', 'w', 'b'];
     private $key_index = 0;
 
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
