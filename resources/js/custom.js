@@ -8,13 +8,15 @@ const $headercontent = document.querySelector('#header-content');
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 128) {
 		$header.classList.add('-translate-y-12')
-            $logo.classList.add('scale-80')
+            $logo.classList.add('scale-90')
+            $logo.classList.add('translate-y-2')
             $arrow.classList.remove('animate-bounce')
             $headercontent.classList.add('translate-y-2')
 		return
 	}
       $header.classList.remove('-translate-y-12')
-      $logo.classList.remove('scale-80')
+      $logo.classList.remove('scale-90')
+      $logo.classList.remove('translate-y-2')
       $arrow.classList.add('animate-bounce')
       $headercontent.classList.remove('translate-y-2')
 

@@ -39,8 +39,8 @@
 			<?php endif; ?>
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
 					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
-						<div id="header-content" class="flex justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
-							<div class="flex items-center justify-between">
+						<div id="header-content" class="flex lg:justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
+							<div class="flex items-center">
 								<?php if (has_custom_logo()) { ?>
 									<?php the_custom_logo(); ?>
 								<?php } else { ?>
@@ -48,9 +48,9 @@
 										<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
 									</a>
 								<?php } ?>
-								<div class="lg:hidden">
-									<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-										<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<div class="lg:hidden absolute right-8">
+									<a href="" aria-label="Toggle navigation" id="primary-menu-toggle">
+										<svg viewBox="0 0 20 20" class="inline-block w-6 h-6">
 											<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 												<g id="icon-shape">
 													<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z" id="Combined-Shape" fill="#a18160"></path>
@@ -74,7 +74,7 @@
 							// 	)
 							// );
 							if (wp_is_mobile()) {
-								echo '<div id="primary-menu" class="absolute hidden z-10 mt-36 right-0 top-0">';
+								echo '<div id="primary-menu" class="absolute hidden z-10 mt-40 right-0 top-0 duration-300">';
 								wp_nav_menu(array(
 									'theme_location' => 'primary',
 									'walker' => new Mobile_Piano_Menu_Walker()
@@ -84,6 +84,7 @@
 								
 								wp_nav_menu(array(
 									'theme_location' => 'primary',
+									'menu_class' => 'hidden lg:flex items-end justify-center',
 									'walker' => new Piano_Menu_Walker()
 								));
 								
