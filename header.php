@@ -62,17 +62,32 @@
 							</div>
 
 							<?php
-							wp_nav_menu(
-								array(
-									'container_id'    => 'primary-menu',
-									'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
-									'menu_class'      => 'lg:flex items-end justify-center',
-									'menu_item'	      => 'flex justify-center',
-									'theme_location'  => 'primary',
-									'walker'          => new Piano_Menu_Walker(),
-									'fallback_cb'     => false
-								)
-							);
+							// wp_nav_menu(
+							// 	array(
+							// 		'container_id'    => 'primary-menu',
+							// 		'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
+							// 		'menu_class'      => 'lg:flex items-end justify-center',
+							// 		'menu_item'	      => 'flex justify-center',
+							// 		'theme_location'  => 'primary',
+							// 		'walker'          => new Piano_Menu_Walker(),
+							// 		'fallback_cb'     => false
+							// 	)
+							// );
+							if (wp_is_mobile()) {
+								echo '<div id="primary-menu" class="absolute hidden z-10 mt-36 right-0 top-0">';
+								wp_nav_menu(array(
+									'theme_location' => 'primary',
+									'walker' => new Mobile_Piano_Menu_Walker()
+								));
+								echo '</div>';
+							} else {
+								
+								wp_nav_menu(array(
+									'theme_location' => 'primary',
+									'walker' => new Piano_Menu_Walker()
+								));
+								
+							}
 							?>
 						</div>
 					</div>
