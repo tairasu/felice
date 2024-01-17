@@ -4,6 +4,7 @@ const $header = document.querySelector('#header-banner');
 const $logo = document.querySelector('#logo');
 const $arrow = document.querySelector('#bounce-arrow');
 const $headercontent = document.querySelector('#header-content');
+const $bouncearrow = document.querySelector('#bounce-arrow');
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 128) {
@@ -21,3 +22,10 @@ window.addEventListener('scroll', () => {
       $headercontent.classList.remove('translate-y-2')
 
 });
+
+//bounce arrow click causes scroll down smoothly using scrollIntoView
+$bouncearrow.addEventListener('click', () => {
+      document.querySelector('#about').scrollIntoView({
+            behavior: 'smooth'
+      });
+})
