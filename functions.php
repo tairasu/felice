@@ -109,3 +109,9 @@ function felice_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 add_filter( 'nav_menu_submenu_css_class', 'felice_nav_menu_add_submenu_class', 10, 3 );
 
 require_once get_template_directory() . '/piano-menu-walker.php';
+
+function your_theme_enqueue_styles() {
+    wp_enqueue_style('tailwindcss', 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css', [], null);
+}
+
+add_action('wp_enqueue_scripts', 'your_theme_enqueue_styles');
