@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Template Name: Profile Block
+ *
+ * @package WordPress
+ * @subpackage felice
+ * @since Felice 1.0
+ */
+
+
 // Retrieve custom fields/meta for the profile.
 $profile_photo_url = get_post_meta(get_the_ID(), 'profile_photo', true);
 $full_name = get_post_meta(get_the_ID(), 'full_name', true);
