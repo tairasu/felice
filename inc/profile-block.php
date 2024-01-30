@@ -9,14 +9,14 @@
 // Retrieve custom fields/meta for the profile using ACF functions.
 $profile_photo = get_field('profile_photo');
 $full_name = get_field('profile_name');
-$department_title = get_field('profile_title');
+$profile_title = get_field('profile_title');
 $about_sections = get_field('profile_section_text'); // Assume this returns an array of sections with title and content.
 
 get_header();
 ?>
 
 <div class="container mx-auto my-6 p-4">
-    <h1 class="text-xl font-bold mb-4"><?php echo esc_html($department_title); ?></h1>
+    <h1 class="text-xl font-bold mb-4"><?php echo esc_html($profile_title); ?></h1>
     <div class="flex flex-wrap md:flex-nowrap">
         <div class="w-full md:w-1/4">
             <img src="<?php echo esc_url($profile_photo['url']); ?>" alt="<?php echo esc_attr($profile_photo['alt']); ?>" class="rounded-full w-32 h-32 object-cover">
