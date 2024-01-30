@@ -115,3 +115,10 @@ function felice_enqueue_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'felice_enqueue_styles');
+
+function custom_logo_class($html) {
+
+    $html = str_replace('class="custom-logo"', 'class="h-24 w-auto drop-shadow-lg align-bottom transition duration-300 ease-in-out"', $html);
+    return $html;
+}
+add_filter('get_custom_logo', 'custom_logo_class');

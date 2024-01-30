@@ -41,13 +41,9 @@
 					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
 						<div id="header-content" class="flex lg:justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
 							<div class="flex items-center">
-								<?php if (has_custom_logo()) { ?>
+								
 									<?php the_custom_logo(); ?>
-								<?php } else { ?>
-									<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-										<img id="logo" src="/wp-content/uploads/2023/10/logo-1.png" alt="logo" class="h-24 drop-shadow-lg align-bottom transition duration-300 ease-in-out">
-									</a>
-								<?php } ?>
+
 								<div class="lg:hidden absolute right-8">
 									<a href="" aria-label="Toggle navigation" id="primary-menu-toggle">
 										<svg viewBox="0 0 20 20" class="inline-block w-6 h-6">
@@ -62,17 +58,6 @@
 							</div>
 
 							<?php
-							// wp_nav_menu(
-							// 	array(
-							// 		'container_id'    => 'primary-menu',
-							// 		'container_class' => 'hidden bg-4/50 rounded-lg mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block z-40',
-							// 		'menu_class'      => 'lg:flex items-end justify-center',
-							// 		'menu_item'	      => 'flex justify-center',
-							// 		'theme_location'  => 'primary',
-							// 		'walker'          => new Piano_Menu_Walker(),
-							// 		'fallback_cb'     => false
-							// 	)
-							// );
 							if (wp_is_mobile()) {
 								echo '<div id="primary-menu" class="absolute hidden z-10 mt-40 right-0 top-0 duration-300">';
 								wp_nav_menu(array(
