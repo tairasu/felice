@@ -21,7 +21,7 @@ class Piano_Menu_Walker extends Walker_Nav_Menu {
             }
     
             // white key
-            $output .= sprintf('<li class="bg-orange-50 border border-orange-900/20 rounded-lg h-48 w-20 shadow-lg p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-end justify-center break-keep text-center">%s</a></li>',
+            $output .= sprintf('<li class="bg-orange-50 border border-orange-900/20 rounded-lg h-48 w-20 shadow-xl hover:shadow-md p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-end justify-center break-keep text-center">%s</a></li>',
                 esc_url($item->url),
                 esc_html($item->title)
             );
