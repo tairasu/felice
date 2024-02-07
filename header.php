@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="wp-content/themes/felice/resources/js/app.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -40,7 +41,7 @@
 				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
 					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
 						<div id="header-content" class="flex lg:justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
-							<div class="flex items-center">
+							<div class="flex items-center logo">
 								
 									<?php the_custom_logo(); ?>
 
@@ -102,5 +103,5 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-		<script src="wp-content/themes/felice/resources/js/custom.js"></script>
+	
 
