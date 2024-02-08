@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="wp-content/themes/felice/resources/js/app.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -103,5 +102,3 @@
 				<div class="h-0"></div>
 			</div>
 			<?php endif; ?>
-	
-

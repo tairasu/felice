@@ -24,4 +24,5 @@
 <?php wp_footer(); ?>
 
 </body>
+<script src="/wp-content/themes/felice/resources/js/app.js"></script>
 </html>
