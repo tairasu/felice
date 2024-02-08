@@ -18,7 +18,7 @@ echo '<div class="container mx-auto my-6 p-10 bg-orange-50 shadow-lg rounded-lg"
   }
 
   echo '<div class="w-full md:w-3/4 md:pl-8">';
-  printf('<p class="text-4xl font-bold my-4">%s</p>', $profile_title);
+  printf('<p class="text-4xl font-bold my-4 font-hannari">%s</p>', $profile_title);
   printf('<h2 class="font-semibold mb-2">%s</h2>', $full_name);
 
 // Check if the repeater field exists and has values
