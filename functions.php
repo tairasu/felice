@@ -122,3 +122,11 @@ function custom_logo_class($html) {
     return $html;
 }
 add_filter('get_custom_logo', 'custom_logo_class');
+
+#image filter
+add_filter('render_block', function ($block_content, $block) {
+    if ($block['blockName'] === 'core/image') {
+        $block_content = str_replace('<img', '<img class="rounded-lg"', $block_content);
+    }
+    return $block_content;
+}, 10, 2);
