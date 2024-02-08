@@ -130,3 +130,14 @@ add_filter('render_block', function ($block_content, $block) {
     }
     return $block_content;
 }, 10, 2);
+
+#to center youtube videos
+function add_flex_classes_to_embed_wrapper( $block_content, $block ) {
+    // Check if the block content contains the 'wp-block-embed__wrapper' class
+    if ( strpos( $block_content, 'wp-block-embed__wrapper' ) !== false ) {
+        // Replace the class with additional classes
+        $block_content = str_replace( 'wp-block-embed__wrapper', 'wp-block-embed__wrapper flex justify-center', $block_content );
+    }
+    return $block_content;
+}
+add_filter( 'render_block', 'add_flex_classes_to_embed_wrapper', 10, 2 );
