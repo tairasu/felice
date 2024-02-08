@@ -10,7 +10,7 @@ echo '<div class="container mx-auto my-6 p-10 bg-orange-50 shadow-lg rounded-lg"
   if ($profile_photo) {
       printf(
           '<div class="w-full md:w-1/4 flex justify-center">
-              <img src="%s" alt="%s" class="rounded-b-md rounded-t-full w-48 lg:h-3/4 h-64 object-cover object-center ring-4 ring-yellow-700 shadow-sm hover:scale-105 duration-300 hover:shadow-lg">
+              <img src="%s" alt="%s" class="rounded-b-md rounded-t-full w-48 lg:h-3/4 h-64 object-cover object-center ring-4 ring-yellow-700 bg-yellow-800 shadow-sm hover:scale-105 duration-300 hover:shadow-lg">
           </div>',
           esc_url($profile_photo['url']),
           esc_attr($profile_photo['alt'])
