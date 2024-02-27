@@ -25,7 +25,8 @@ module.exports = {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             backgroundImage: {
-                'header': "url('http://felice.school/wp-content/uploads/2023/10/DSC00134.jpg')"
+                'header': "url('/wp-content/uploads/2023/10/DSC00134.jpg')",
+                'sheets': "url('/wp-content/uploads/2024/02/Notenheft_Nur-Heft-ohne-Noten.png')",
             },
             colors: {
                 1: '#a18160',
@@ -47,7 +48,8 @@ module.exports = {
     },
     variants: {
         extend: {
-            display: ["group-hover"]
+            display: ["group-hover"],
+            backgroundImage: ['responsive', 'hover', 'focus'],
         }
     },
     plugins: [

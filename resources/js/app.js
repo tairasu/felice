@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
 //Shrink header
 //select header-banner id
 const $header = document.querySelector('#header-banner');
-// const $logo = document.querySelector('#logo');
+const $logo = document.querySelector('#logo');
 const $arrow = document.querySelector('#bounce-arrow');
 const $headercontent = document.querySelector('#header-content');
 
@@ -26,8 +26,8 @@ const $headercontent = document.querySelector('#header-content');
 window.addEventListener('scroll', () => {
 	if (window.scrollY > 128) {
 		$header.classList.add('-translate-y-12')
-            // $logo.classList.add('scale-90')
-            // $logo.classList.add('translate-y-2')
+            $logo.classList.add('scale-90')
+            $logo.classList.add('translate-y-2')
             if($arrow) {
                   $arrow.classList.remove('animate-bounce')
             }
@@ -35,8 +35,8 @@ window.addEventListener('scroll', () => {
 		return
 	}
       $header.classList.remove('-translate-y-12')
-      // $logo.classList.remove('scale-90')
-      // $logo.classList.remove('translate-y-2')
+      $logo.classList.remove('scale-90')
+      $logo.classList.remove('translate-y-2')
       if($arrow) {
             $arrow.classList.add('animate-bounce')
       }

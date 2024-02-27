@@ -141,3 +141,10 @@ function add_flex_classes_to_embed_wrapper( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'add_flex_classes_to_embed_wrapper', 10, 2 );
+
+#makes logo link with js possible
+function add_logo_id($html) {
+    $html = str_replace('class="logo', 'class="logo" id="logo"', $html);
+    return $html;
+}
+add_filter('get_custom_logo', 'add_logo_id');

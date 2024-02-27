@@ -9,22 +9,18 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-4 text-gray-900 antialiased'); ?>>
+<body <?php body_class('bg-orange-50/75 text-gray-900 antialiased'); ?>>
 
 	<?php do_action('felice_site_before'); ?>
 
 	<!--Contact button-->
 	<?php if(!is_page('contact')): ?>
-		<a href="/contact">
-		<button class="lg:hidden fixed bottom-6 right-6 bg-1 text-4 hover:bg-3 hover:text-1 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
+		<a href="/contact" class="lg:hidden fixed bottom-6 right-6 bg-yellow-700 text-orange-50 hover:bg-orange-50 ring-1 ring-yellow-700 hover:text-yellow-700 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
 			お問い合わせ
-		</button>
-	</a>
-	<a href="/contact">
-	<button class="fixed bottom-12 right-12 bg-1 text-4 hover:bg-3 hover:text-1 font-bold p-6 rounded-full z-30 shadow-lg transition duration-300 hidden lg:block">
-		無料で体験レッスン
-	</button>
-	</a>
+		</a>
+		<a href="/contact" class="fixed bottom-12 right-12 bg-yellow-700 text-orange-50 hover:bg-orange-50 ring-1 ring-yellow-700 hover:text-yellow-700 font-bold p-6 rounded-full z-30 shadow-lg transition duration-300 hidden lg:block">
+			無料で体験レッスン
+		</a>
 	<?php endif; ?>
 
 
@@ -37,10 +33,10 @@
 			<?php else: ?>
 			<header class="lg:bg-center bg-bottom bg-fixed top-0 lg:bg-cover bg-auto w-screen h-0 z-30">
 			<?php endif; ?>
-				<div class="backdrop-blur-sm bg-4/50 w-full h-full">
-					<div id="header-banner" class="bg-4/75 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
+				<div class="backdrop-blur-sm bg-yellow-700/25 w-full h-full sticky">
+					<div id="header-banner" class="bg-orange-50/50 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
 						<div id="header-content" class="flex lg:justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
-							<div class="flex items-center logo">
+							<div class="flex items-center">
 								
 									<?php the_custom_logo(); ?>
 
@@ -79,9 +75,9 @@
 					</div>
 					
 					<?php if(is_front_page()): ?>
-					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-4/75 z-20">
+					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-orange-50/75 z-20">
 						<div class="lg:h-24 h-0"></div>
-						<h1 class="lg:text-7xl text-3xl text-1 lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
+						<h1 class="lg:text-7xl text-3xl text-yellow-800 lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
 						<div>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
