@@ -93,7 +93,7 @@
 			</header>
 
 			<?php if(!is_front_page()): ?>
-				<div class="h-40"></div>
+				<div class="h-48"></div>
 			<?php else: ?>
 				<div class="h-0"></div>
 			</div>

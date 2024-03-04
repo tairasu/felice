@@ -4,7 +4,7 @@ $profile_photo = !empty($attributes['profile_photo']) ? $attributes['profile_pho
 $full_name = !empty($attributes['profile_name']) ? esc_html($attributes['profile_name']) : '';
 $profile_title = !empty($attributes['profile_title']) ? esc_html($attributes['profile_title']) : '';
 
-echo '<div class="container mx-auto my-6 p-10 bg-orange-50 shadow-lg rounded-lg">';
+echo '<div class="container mx-auto my-6 p-10 bg-white/25 shadow-lg rounded-lg ring-1 ring-yellow-700 hover:shadow-xl duration-200">';
   echo '<div class="flex flex-wrap md:flex-nowrap">';
 
   if ($profile_photo) {
