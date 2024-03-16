@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-orange-50/75 text-gray-900 antialiased'); ?>>
+<body <?php body_class('bg-orange-50/50 text-gray-900 antialiased'); ?>>
 
 	<?php do_action('felice_site_before'); ?>
 
@@ -33,12 +33,13 @@
 			<?php else: ?>
 			<header class="lg:bg-center bg-bottom bg-fixed top-0 lg:bg-cover bg-auto w-screen h-0 z-30">
 			<?php endif; ?>
-				<div class="backdrop-blur-sm bg-yellow-700/25 w-full h-full sticky">
-					<div id="header-banner" class="bg-orange-50/50 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
+			<div id="header-banner" class="bg-orange-50/50 shadow-lg fixed backdrop-blur lg:-mt-24 w-full duration-300 ease-in-out z-40">
 						<div id="header-content" class="flex lg:justify-between lg:mx-16 items-end py-6 transition duration-300 ease-in-out">
 							<div class="flex items-center">
-								
+
+								<div id="header-logo" class="duration-200">
 									<?php the_custom_logo(); ?>
+								</div>
 
 								<div class="lg:hidden absolute right-8">
 									<a href="" aria-label="Toggle navigation" id="primary-menu-toggle">
@@ -73,6 +74,8 @@
 							?>
 						</div>
 					</div>
+				<div class="backdrop-blur-sm bg-yellow-700/25 w-full h-full">
+
 					
 					<?php if(is_front_page()): ?>
 					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-orange-50/75 z-20">
