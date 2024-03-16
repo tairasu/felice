@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
 //Shrink header
 //select header-banner id
 const $header = document.querySelector('#header-banner');
-const $logo = document.querySelector('#logo');
+const $logo = document.querySelector('#header-logo');
 const $arrow = document.querySelector('#bounce-arrow');
 const $headercontent = document.querySelector('#header-content');
 
