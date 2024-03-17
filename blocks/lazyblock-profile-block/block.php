@@ -4,7 +4,7 @@ $profile_photo = !empty($attributes['profile_photo']) ? $attributes['profile_pho
 $full_name = !empty($attributes['profile_name']) ? esc_html($attributes['profile_name']) : '';
 $profile_title = !empty($attributes['profile_title']) ? esc_html($attributes['profile_title']) : '';
 
-echo '<div class="container mx-auto my-6 p-10 bg-white/25 shadow-lg rounded-lg ring-1 ring-yellow-700 hover:shadow-xl duration-200">';
+echo '<div class="container mx-auto my-6 p-10 bg-white/50 shadow-lg rounded-lg ring-1 ring-yellow-700 hover:shadow-xl duration-200">';
   echo '<div class="flex flex-wrap md:flex-nowrap">';
 
   if ($profile_photo) {
@@ -18,7 +18,7 @@ echo '<div class="container mx-auto my-6 p-10 bg-white/25 shadow-lg rounded-lg r
   }
 
   echo '<div class="w-full md:w-3/4 md:pl-8">';
-  printf('<p class="text-4xl font-bold my-4 font-hannari">%s</p>', $profile_title);
+  printf('<h1 class="text-4xl font-bold font-hannari">%s</h1>', $profile_title);
   printf('<h2 class="font-semibold mb-2">%s</h2>', $full_name);
 
 // Check if the repeater field exists and has values
@@ -32,9 +32,9 @@ if (!empty($attributes['repeater']) && is_array($attributes['repeater'])) {
         // Output the section title and text if they exist
         if ($section_title || $section_text) {
             printf(
-                '<hr class="my-2 border-gray-300">
-                <div class="my-2">
-                    <h3 class="text-md bg-4 shadow-inner w-fit p-2 my-2 justify-center rounded-lg font-semibold">%s</h3>
+                '<hr class="border-gray-300">
+                <div class="">
+                    <h4 class="text-md bg-4 shadow-inner w-fit p-2 my-2 justify-center rounded-lg font-semibold">%s</h4>
                     <p>%s</p>
                 </div>',
                 $section_title,
