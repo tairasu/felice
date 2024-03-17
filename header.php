@@ -10,16 +10,15 @@
 </head>
 
 <?php
-
-echo '<div id="mobile-menu" class="fixed bg-red-950 p-2 rounded-xl h-fit lg:hidden -right-4 top-40 duration-300 translate-x-64">';
-	wp_nav_menu(array(
-		'theme_location' => 'primary',
-		'walker' => new Mobile_Piano_Menu_Walker()
-	));
-echo '</div>';
+	echo '<div id="mobile-menu" class="fixed bg-gray-700 shadow-2xl p-2 rounded-xl h-fit lg:hidden -right-4 top-4 duration-300 translate-x-64">';
+		wp_nav_menu(array(
+			'theme_location' => 'primary',
+			'walker' => new Mobile_Piano_Menu_Walker()
+		));
+	echo '</div>';
 ?>	
 
-<body <?php body_class('bg-orange-50/50 text-gray-900 antialiased'); ?>>
+<body <?php body_class('bg-orange-50/25 text-gray-900 antialiased'); ?>>
 
 
 	<?php do_action('felice_site_before'); ?>
@@ -81,7 +80,7 @@ echo '</div>';
 					<?php if(is_front_page()): ?>
 					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-orange-50/75 z-10">
 						<div class="lg:h-24 h-0"></div>
-						<h1 class="lg:text-7xl text-3xl text-yellow-800 lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</h1>
+						<div class="lg:text-7xl text-3xl text-yellow-800 font-bold lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</div>
 						<div>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
 							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
