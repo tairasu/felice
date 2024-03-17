@@ -6,13 +6,6 @@ const $mobile_nav_toggle = document.querySelector('#menu-toggle');
 const $mobile_menu = document.querySelector('#mobile-menu');
 
 
-//make grecaptcha-badge invisible
-window.addEventListener('load', function () {
-      let grecaptcha_badge = document.querySelector('.grecaptcha-badge');
-      grecaptcha_badge.classList.add('invisible');
-});
-
-
 
 
 
@@ -57,10 +50,17 @@ if ($arrow) {
 // });
 
 window.addEventListener('load', function () {
-      let mobile_menu = document.querySelector('#mobile-menu');
-      let overlay = document.createElement('div');
-      overlay.classList.add('fixed', 'inset-0', 'bg-black/50', 'hidden');
-      document.body.appendChild(overlay);
+      let grecaptcha_badge = document.querySelector('.grecaptcha-badge');
+      if (grecaptcha_badge) {
+          grecaptcha_badge.classList.add('invisible');
+      }
+  
+      let overlay = document.querySelector('.overlay');
+      if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.classList.add('overlay', 'fixed', 'inset-0', 'bg-black/50', 'hidden');
+          document.body.appendChild(overlay);
+      }
   
       document.querySelector('#menu-toggle').addEventListener('click', function (e) {
           e.preventDefault();
