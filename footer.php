@@ -9,7 +9,7 @@
 
 
 
-<footer id="colophon" class="site-footer bg-orange-50 py-14 z-40 sticky" role="contentinfo">
+<footer id="colophon" class="site-footer bg-orange-50 py-14 z-30 sticky" role="contentinfo">
 	<?php do_action( 'felice_footer' ); ?>
 
 	<div class="container mx-auto text-center text-gray-500">
@@ -24,5 +24,5 @@
 <?php wp_footer(); ?>
 
 </body>
-<script src="/wp-content/themes/felice/resources/js/app.js"></script>
+<script src="/wp-content/themes/felice/resources/js/custom.js"></script>
 </html>
