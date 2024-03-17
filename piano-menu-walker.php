@@ -21,7 +21,7 @@ class Piano_Menu_Walker extends Walker_Nav_Menu {
             }
     
             // white key
-            $output .= sprintf('<li class="bg-white/75 border border-orange-900/20 rounded-lg h-48 w-20 shadow-xl hover:shadow-md p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-end justify-center break-keep text-center">%s</a></li>',
+            $output .= sprintf('<li class="bg-white/75 border border-orange-900/20 rounded-lg h-48 w-20 shadow-xl hover:shadow-md p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-end justify-center break-keep text-gray-700 text-center">%s</a></li>',
                 esc_url($item->url),
                 esc_html($item->title)
             );
@@ -48,7 +48,7 @@ class Mobile_Piano_Menu_Walker extends Walker_Nav_Menu {
                 $this->key_index++;
             }
     
-            $output .= sprintf('<li class="pl-4 bg-white border border-orange-900/20 rounded-lg h-16 w-36 shadow-lg p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-center justify-start break-keep text-center">%s</a></li>',
+            $output .= sprintf('<li class="pl-4 bg-white border border-orange-900/20 rounded-lg h-16 w-36 shadow-lg p-2 hover:bg-orange-100 hover:scale-95 transition duration-200 ease-in-out"><a href="%s" class="flex font-bold h-full w-full items-center justify-start break-keep text-center text-gray-700">%s</a></li>',
                 esc_url($item->url),
                 esc_html($item->title)
             );
