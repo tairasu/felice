@@ -25,10 +25,10 @@
 
 	<!--Contact button-->
 	<?php if(!is_page('contact')): ?>
-		<a href="/contact" class="lg:hidden fixed bottom-6 right-6 bg-yellow-700 text-orange-50 hover:bg-orange-50 ring-1 ring-yellow-700 hover:text-yellow-700 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
+		<a href="/contact" class="lg:hidden fixed bottom-6 right-6 bg-orange-50 text-yellow-800 hover:bg-white ring-1 ring-yellow-800 hover:text-yellow-700 font-bold transition duration-300 p-6 shadow-lg rounded-full z-30">
 			お問い合わせ
 		</a>
-		<a href="/contact" class="fixed bottom-12 right-12 bg-yellow-700 text-orange-50 hover:bg-orange-50 ring-1 ring-yellow-700 hover:text-yellow-700 font-bold p-6 rounded-full z-30 shadow-lg transition duration-300 hidden lg:block">
+		<a href="/contact" class="fixed bottom-12 right-12 bg-orange-50 text-yellow-800 hover:bg-white ring-1 ring-yellow-800 hover:text-yellow-700 font-bold p-6 rounded-full z-30 shadow-lg transition duration-300 hidden lg:block">
 			無料で体験レッスン
 		</a>
 	<?php endif; ?>
