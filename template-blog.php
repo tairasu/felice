@@ -7,7 +7,7 @@ get_header();
 
 $blogPosts = get_posts(array(
     'category_name' => 'blog',
-    'numberposts' => 9
+    'numberposts' => 99
 ));
 
 // print_r($blogPosts);
@@ -15,14 +15,14 @@ $blogPosts = get_posts(array(
 ?>
 
 
-<div class="grid grid-cols-12 gap-6 w-full md:w-3/4 lg:w-2/3 mx-auto mb-6 px-4">
+<div class="grid grid-cols-12 gap-6 w-full md:w-3/4 lg:w-2/3 mx-auto mb-6 mt-4 px-4">
 
 <?php
 foreach ($blogPosts as $post) {
     setup_postdata($post);
     ?>
     <a href="<?php the_permalink(); ?>" class="col-span-12 md:col-span-6 lg:col-span-4 relative">
-        <article id="post-<?php the_ID(); ?>" <?php post_class('bg-white shadow-lg rounded-lg p-4 aspect-square ring-1 hover:scale-105 hover:shadow-2xl duration-200 ring-yellow-800'); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('bg-white shadow-lg rounded-lg p-4 aspect-square ring-1 hover:scale-105 hover:shadow-2xl duration-300 ring-yellow-800'); ?>>
             <?php
             if (has_post_thumbnail()) {
                 the_post_thumbnail('medium', ['class' => 'rounded-lg w-full h-auto bg-cover bg-center shadow-md object-cover aspect-square absolute inset-0']);
