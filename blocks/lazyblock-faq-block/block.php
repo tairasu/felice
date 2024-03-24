@@ -3,7 +3,7 @@
 
 // Check if the 'faq' repeater is not empty and is an array
 if (!empty($attributes['faq']) && is_array($attributes['faq'])) {
-    echo '<div class="bg-white/50 rounded-lg shadow-lg mb-12 ring-1 ring-yellow-700">';
+    echo '<div class="bg-white/50 rounded-lg shadow-lg mb-12 mt-6 ring-1 ring-yellow-700">';
         echo '<div class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-4 lg:py-20">';
             echo '<div class="mx-auto max-w-4xl divide-y divide-gray-900/10">';
                 echo '<h1 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">よくある質問</h1>';

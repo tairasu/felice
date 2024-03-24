@@ -27,7 +27,8 @@ if (!empty($attributes['repeater']) && is_array($attributes['repeater'])) {
     foreach ($attributes['repeater'] as $row) {
 
         $section_title = !empty($row['profile_section_title']) ? esc_html($row['profile_section_title']) : '';
-        $section_text = !empty($row['profile_section_text']) ? esc_html($row['profile_section_text']) : '';
+        $section_text = !empty($row['profile_section_text']) ? nl2br(esc_html($row['profile_section_text'])) : '';
+        $section_text = str_replace(['&lt;br&gt;', '&lt;br/&gt;', '&lt;br /&gt;'], '<br>', $section_text);
 
         // Output the section title and text if they exist
         if ($section_title || $section_text) {
@@ -35,7 +36,7 @@ if (!empty($attributes['repeater']) && is_array($attributes['repeater'])) {
                 '<hr class="border-gray-300">
                 <div class="">
                     <h4 class="text-md bg-4 shadow-inner w-fit p-2 my-2 justify-center rounded-lg font-semibold">%s</h4>
-                    <p>%s</p>
+                    <p class="text-justify">%s</p>
                 </div>',
                 $section_title,
                 $section_text
