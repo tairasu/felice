@@ -80,10 +80,10 @@
 					<?php if(is_front_page()): ?>
 					<div class="flex items-center justify-center h-full text-center flex-col mx-auto bg-orange-50/75 z-10">
 						<div class="lg:h-24 h-0"></div>
-						<div class="lg:text-7xl text-3xl text-yellow-800 font-bold lg:p-20 lg:mb-0 mb-6 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</div>
+						<div class="lg:text-7xl text-3xl text-yellow-800 font-bold lg:p-20 py-16 mt-24 drop-shadow-xl font-hannari">「憧れの楽器を日常に。」</div>
 						<div>
-							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
-							<p class="p-4 lg:text-2xl text-xl drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
+							<h4 class="p-4 lg:text-2xl text-xl text-center drop-shadow-md">福岡県直方市の音楽教室「フェリーチェ音楽教室」のホームページにようこそ！</p>
+							<h4 class="p-4 lg:text-2xl text-xl text-center drop-shadow-md">筑豊地区で数少ないピアノ、バイオリンとチェロの教室です。</p>
 						</div>
 						<svg id="bounce-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce transform-cpu mt-24 w-8 h-8 cursor-pointer">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
@@ -96,7 +96,7 @@
 			</header>
 
 			<?php if(!is_front_page()): ?>
-				<div class="h-48"></div>
+				<div class="h-36"></div>
 			<?php else: ?>
 				<div class="h-0"></div>
 			</div>
